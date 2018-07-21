@@ -1,0 +1,30 @@
+{
+  "name": "react-native-redispubsub",
+  "version": "0.1.3",
+  "private": false,
+  "main": "RedisClient.js",
+  "description": "Redis Cleint for react native which does redis pub sub",
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koolkarni/React-Native-Redispubsub.git"
+  },
+  "author": "Nikhil H kulkarni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koolkarni/React-Native-Redispubsub/issues"
+  },
+  "homepage": "https://github.com/koolkarni/React-Native-Redispubsub#readme",
+  "keywords": [
+    "pub",
+    "sub",
+    "react-native",
+    "redis",
+    "client",
+    "react-native-redis",
+    "react-native-redispubsub",
+    "react-native-redis-client",
+    "react-native-redispubsub-client"
+  ]
+}

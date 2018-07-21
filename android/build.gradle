@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+    }
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+
+    maven {
+        url "$projectDir/../../../react-native/android"
+    }
+
+}
+
+android {
+      compileSdkVersion rootProject.ext.compileSdkVersion
+      buildToolsVersion rootProject.ext.buildToolsVersion
+
+defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+    }
+}
+
+dependencies {
+    compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
+    compile 'com.android.support:multidex:1.0.0'
+    compile "com.facebook.react:react-native:+"
+    compile "org.redisson:redisson:2.9.1"
+}
