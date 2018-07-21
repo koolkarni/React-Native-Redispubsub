@@ -24,6 +24,15 @@ constructor(props) {
   You Might need to add in your applicaton android gradle.buildDir
 
   ````
+  android {
+
+    defaultConfig {
+       multiDexEnabled true
+       }
+    }
+
+  you can add it after buildTypes{...}
+
   packagingOptions {
          pickFirst 'META-INF/INDEX.LIST'
          pickFirst 'META-INF/LICENSE'
@@ -31,6 +40,10 @@ constructor(props) {
          pickFirst 'META-INF/io.netty.versions.properties'
      }
   ````
+update the gradle.properties
+````
+set org.gradle.jvmargs=-Xmx1536M
+````
 
   Your Project needs to have an ext like below. as this will import the buildToolVersion from rootDir or root project
 
