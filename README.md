@@ -11,11 +11,15 @@ import {DeviceEventEmitter} from 'react-native';
 constructor(props) {
     super(props);
     RedisClient.redisConnect("192.168.1.215:6379");
+    //subscriber to channel 
     RedisClient.subscribe("androidChannel");
 
+    //listen to channel 
     DeviceEventEmitter.addListener('androidChannel', function(e: Event) {
         alert(e);
       });
+      
+      //publish to channel 
       RedisClient.publish("featureChannel","GOT IT :D");
   }
   ````
