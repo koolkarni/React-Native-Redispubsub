@@ -1,5 +1,7 @@
 # React-Native-Redispubsub
 
+Follow the instructions or Open a ticket if you need any help.
+
 an RN lib which exposes pub/sub of redis in react native without any node server or socket or node redis client
 
 
