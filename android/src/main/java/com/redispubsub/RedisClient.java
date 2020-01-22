@@ -43,8 +43,7 @@ public class RedisClient extends ReactContextBaseJavaModule {
     public void redisConnect(String ipPort){
         //Redisson client setup to be done in background thread
         try {
-            //42.42.42.77 Pandari machine IP
-            //42.42.42.42 Coros Van IP
+            
             Config config = new Config();
             config.useSingleServer().setAddress(ipPort); //IPAddress of Redis and port
             mredissonClient = Redisson.create(config);
